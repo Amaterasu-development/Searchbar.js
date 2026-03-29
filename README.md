@@ -11,3 +11,10 @@ let elementsForSearch = [
         ]
 setupSearchBar(elementsForSearch, "Sorry, no content found here")
 ````
+``elementsForSearch``: The Array for the elements
+
+``textElement``: The text for the output
+
+``link``: the href source
+
+``isExternalLink``: if the link must be opened in a new tab
