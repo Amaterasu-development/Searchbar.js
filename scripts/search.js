@@ -1,11 +1,12 @@
 let searchbars = document.querySelectorAll("[data-filter='search']")
 let output = document.querySelectorAll("ul.results")
 
-export function setupSearchBar(searchElements, errorMessage) {
+function setupSearchBar(searchElements, errorMessage) {
     searchbars.forEach((searchInput) => {
         searchInput.addEventListener("keyup", () => {
-            let searchValue = searchInput.value.toLowerCase();
-
+            let searchContent = searchInput.value
+            let searchValue = searchContent.toLowerCase();
+            
             // Clear content
             output.forEach(searchbar => {
                 searchbar.innerHTML = "";
@@ -30,10 +31,14 @@ export function setupSearchBar(searchElements, errorMessage) {
                 output.forEach(placeOutput => {
                     let results = document.createElement("li");
                     let link = document.createElement("a")
+                    link.textContent = resultOfSearch.textElement + " "; // Affiche la propriété textElement
+
                     if(resultOfSearch.isLinkExternal == true) {
                         link.target = "_blank"
+                        let icon = document.createElement("i")
+                        icon.className = "bi-box-arrow-up-right"
+                        link.appendChild(icon)
                     }
-                    link.textContent = resultOfSearch.textElement; // Affiche la propriété textElement
                     link.href = resultOfSearch.link
                     results.appendChild(link)
                     placeOutput.appendChild(results);

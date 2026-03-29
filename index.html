@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo searchbar.js</title>
+</head>
+<body>
+    <input type="text" data-filter="search" placeholder="search anything...">
+    <ul class="results"></ul>
+    <script src="scripts/search.js"></script>
+    <script>
+        let elementsForSearch = [
+            "Amazon",
+            "Microsoft",
+            "Well I don't know"
+        ]
+        setupSearchBar(elementsForSearch)
+    </script>
+</body>
+</html>
