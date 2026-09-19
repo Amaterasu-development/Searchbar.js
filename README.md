@@ -2,7 +2,7 @@
 Welcome everyone ! I created this library for one thing : take research feature easy in websites
 ## Install
 Now, you can't access to the link because I didn't published on NPM and UNPKG so you cannot use it. (I'm sorry... ^_^)
-But, you can download the release here
+But, you can download the release [here](https://github.com/Amaterasu-development/Searchbar.js/releases/latest)
 ## Usage
 ````javascript
 let elementsForSearch = [
